@@ -73,7 +73,7 @@ def plot_local_thickness(vol, thickness1, thickness2=None, view="sagittal", slic
     num_plots=3 if thickness2 else num_plots=2
 
     #----------------Sagittal slice----------------
-    fig, ax = plt.subplots(1,num_plots,figsize=figsize)
+    fig, ax = plt.subplots(1,num_plots, figsize=figsize)
     match view.lower():
         case "sagittal":
             ax[0].imshow(np.squeeze(vol[slice,:,:]), cmap='gray')
@@ -102,7 +102,7 @@ def plot_local_thickness(vol, thickness1, thickness2=None, view="sagittal", slic
 
             ax[1].imshow(np.squeeze(thickness1[:,:,slice]), cmap='hot')
             ax[1].set_title('Local thickness')
-            
+
             if thickness2:
                 ax[2].imshow(np.squeeze(thickness2[:,:,slice]), cmap='hot')
                 ax[2].set_title('Local thickness')
