@@ -68,6 +68,7 @@ def plot_samples(mask, grid_dict, view=(0, 0), linewidth=3, alpha=1, save_path=N
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
     ax.view_init(*view)
+    ax.axis('equal')
     ax.grid(False)
 
     for axis in [ax.xaxis, ax.yaxis, ax.zaxis]:
